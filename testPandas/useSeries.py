@@ -15,4 +15,6 @@ series2.name = 'budget'
 series2.index.name = 'person'
 # фильтрация и действия с помощью индекса
 print(series2[series2 != "two"] + " dollars")
+# наличие элемента в Series
+print('Serzh' in series2)
 
