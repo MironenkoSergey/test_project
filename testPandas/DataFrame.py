@@ -16,7 +16,7 @@ print("Средняя цена закрытия каждую неделю")
 print(df.resample('W')['Close'].mean(), '\n')
 # визуализация на графике
 allTime = df.loc['2017-Feb':'2012-Feb', ['Open', 'Close']]
-oneYear = df.loc['2015-Aug':'2014-Feb', ['Open', 'Close']]
+oneYear = df.loc['2015-Feb':'2014-Feb', ['Open', 'Close']]
 allTime.plot()
 oneYear.plot()
 plt.show()
