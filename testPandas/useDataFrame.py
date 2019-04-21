@@ -28,4 +28,5 @@ del frame1['unated']
 frame1 = frame1.rename(columns={'country': 'Country'})
 print(frame1, '\n')
 # сохранение DataFrame в .csv
+frame1.reset_index()
 frame1.to_csv("SNG.csv")
