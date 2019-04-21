@@ -14,4 +14,3 @@ pvt = titanik_df.pivot_table(index='Sex', columns='PClass',
                              values='Name', aggfunc='count')
 print("Женщин в каждом классе")
 print(pvt.loc['female', ['1st', '2nd', '3rd']], '\n')
-#
