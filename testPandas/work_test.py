@@ -2,7 +2,10 @@ from pandas import DataFrame, concat
 import numpy as np
 
 
-
+# instead using concate and merge
+# we can use df2[df.keys()[0]] = df[df.keys()[0]]
+# because we have only one key in first frame
+# Example:
 if(__name__ == '__main__'):
     df = DataFrame({'f_data':['2015-01-01', '2015-01-02',
                               '2015-01-03', '2015-01-04',
