@@ -1,4 +1,4 @@
-from pandas import DataFrame
+from pandas import DataFrame, concat
 import numpy as np
 
 
@@ -14,10 +14,9 @@ if(__name__ == '__main__'):
                            'USA', 'Hong Kong',
                            'Russia', 'UK',
                            'Canada']
+
     # print(array)
     df2 = DataFrame(data=array, columns=list_with_countries)
     # print(df2)
-
-
-    df.append(df2, ignore_index=True, sort=True)
-    print(df)
+    df2[df.keys()[0]] = df[df.keys()[0]]
+    print(df2)
