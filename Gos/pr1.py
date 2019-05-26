@@ -1,16 +1,10 @@
-from os import path
-import numpy as np
-
-
 def replace_min_max(path_file=None):
-    # TODO: создать функции с чтением из файла
     if path_file is None:
-        matrix = [[1, 5, 9],
-                  [4, 2, 8],
-                  [7, 1, 1]]
-    else:
         print("\nВведите числа через ','\n")
-        matrix = [list(input("Строка ", i).split(',')) for i in range(10)]
+        matrix = [list(input("Строка ", i, ":").split(',')) for i in range(10)]
+    else:
+        matrix = [list(row.replace('\n', '').split(',')) for row in open(path_file, 'r').readlines()]
+
     maximum = max(map(max, matrix))
     minimum = min(map(min, matrix))
     for i in range(len(matrix)):
@@ -21,8 +15,12 @@ def replace_min_max(path_file=None):
     if path_file is None:
         _ = [print(i) for i in matrix]
     else:
-        pass
+        file = open(path_file, 'w')
+        _ = [file.write(str(i)[1:len(str(i))] + '\n') for i in matrix]
+        file.close()
 
 
 if __name__ == '__main__':
-    replace_min_max()
+    replace_min_max(
+         # 'matrix.txt'
+    )
