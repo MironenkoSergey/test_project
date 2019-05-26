@@ -16,7 +16,7 @@ def replace_min_max(path_file=None):
         _ = [print(i) for i in matrix]
     else:
         file = open(path_file, 'w')
-        _ = [file.write(str(i)[1:len(str(i))] + '\n') for i in matrix]
+        _ = [file.write(str(i)[1:len(str(i)-1)] + '\n') for i in matrix]
         file.close()
 
 
