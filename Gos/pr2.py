@@ -26,6 +26,7 @@ class Foursquare(Shape):
     def calculate_squre(self):
         return self.side ** 2
 
+
 class Triangle(Shape):
     def __init__(self, name, a, h):
         super().__init__(name)
